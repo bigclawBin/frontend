@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "pindie-front_2",
+=======
+  "name": "frontend",
+>>>>>>> 3e7ebb61a9fe300b757813fcbaaea70847e5a7eb
   "version": "0.1.0",
   "private": true,
   "scripts": {
