@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "name": "pindie-front_2",
-=======
-  "name": "frontend",
->>>>>>> 3e7ebb61a9fe300b757813fcbaaea70847e5a7eb
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -17,7 +13,7 @@
     "node": "^22.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "swiper": "^11.0.6",
+    "swiper": "^11.1.3",
     "zustand": "^4.5.0"
   }
 }
