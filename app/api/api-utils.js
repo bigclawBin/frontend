@@ -53,7 +53,7 @@ export const authorize = async (url, data) => {
     const response = await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
     })
     if (response.status !== 200) {
       throw new Error('Ошибка авторизации')
@@ -108,6 +108,7 @@ export const vote = async (url, jwt, usersArray) => {
     const response = await fetch(url, {
       method: 'PUT',
       headers: {
+        'Content-Type': 'application/json',
         Authorization: `Bearer ${jwt}`,
       },
       body: JSON.stringify({ users: usersArray }),
