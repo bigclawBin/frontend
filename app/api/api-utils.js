@@ -22,7 +22,7 @@ const normalizeDataObject = (obj) => {
   const newObj = JSON.parse(str)
   const result = { ...newObj, category: newObj.categories }
   return result;
-}
+} 
 
 export const normalizeData = (data) => {
   return data.map((item) => {
@@ -43,6 +43,7 @@ export const getNormalizedGamesDataByCategory = async (url, category) => {
     }
     return isResponseOk(data) ? normalizeData(data) : data
   } catch (error) {
+    console.log(data)
     return error
   }
 }
@@ -52,7 +53,7 @@ export const authorize = async (url, data) => {
     const response = await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ users: data }) 
+      body: JSON.stringify(data)
     })
     if (response.status !== 200) {
       throw new Error('Ошибка авторизации')
@@ -107,7 +108,6 @@ export const vote = async (url, jwt, usersArray) => {
     const response = await fetch(url, {
       method: 'PUT',
       headers: {
-        'Content-Type': 'application/json',
         Authorization: `Bearer ${jwt}`,
       },
       body: JSON.stringify({ users: usersArray }),
